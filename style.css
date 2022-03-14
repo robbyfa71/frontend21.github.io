@@ -1,3 +1,18 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    list-style: none;
+}
+.container {
+    padding:0 15px;
+    margin: 0 auto;
+    width:1140px;
+}
 body{
   margin: 0px;
   padding: 0px;
@@ -8,22 +23,56 @@ p{
 }
 
 header{
-  width: 100%;
-  height: 180px;
-  background-color: black;
-  background-image: url(src/img/img.jpg);
-  background-repeat: no-repeat;
-  background-position:50% 60%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+    background-color: rgba(22, 160, 133,0.5);
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    z-index: 10;
+    top:0;
 }
-.header-container{
-  margin-top: 115px;
+.left-header {
+    display: block;
+    float: left;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin: 18px 10px;
+    color: white;
+    font-family:monospace;
+    font-weight: bold;
+    text-align : center;
+    line-height: 14px;
 }
-.logo h1{
-  color: white;
+.right-header li {
+   float: right; 
+   margin: 20px 10px;
+   font-size: 15px;
+   color: white;
+   font-family: monospace;
+   font-weight:bold;
+   cursor: pointer;
+}
+.main {
+    background-image: url("https://images.pexels.com/photos/3830745/pexels-photo-3830745.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3830745.jpg&fm=jpg");
+    background-size: cover;
+    text-align: left;
+    height: 200px;
+    width: 100%;
+    padding: 100px 0px;
+}
+.main-text {
+    margin-top: 58px;
+    margin-left: 580px;
+    color: white;
+}
+.main-text h1{
+    letter-spacing: 2px;
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+.main-text p {
+    letter-spacing: 1px;
+    font-size: 15px;
 }
 
 main{
