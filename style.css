@@ -1,16 +1,4 @@
-html,
-body,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-div {
+* {
   margin: 0;
   padding: 0;
 }
@@ -19,15 +7,7 @@ li {
   list-style: none;
 }
 
-.container {
-  padding: 0 15px;
-  margin: 0 auto;
-  width: 1140px;
-}
-
 body {
-  margin: 0px;
-  padding: 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -36,94 +16,104 @@ p {
 }
 
 header {
-  background-color: rgba(173, 206, 98, 0.5);
-  width: 100%;
   height: 65px;
+  width: 100%;
+  background-color: rgba(173, 206, 98, 0.5);
+  color: #fff;
+  opacity: 0.7;
   position: fixed;
-  z-index: 10;
-  top: 0;
+  font-weight: bolder;
 }
 
 .left-header {
-  display: block;
+  padding: 10px 80px;
+  font-size: 17px;
   float: left;
-  font-size: 12px;
-  letter-spacing: 4px;
-  margin: 18px 10px;
-  color: white;
-  font-family: monospace;
-  font-weight: bold;
   text-align: center;
-  line-height: 14px;
+  font-weight: bold;
+}
+
+.right-header {
+  float: right;
+  padding: 0 80px;
 }
 
 .right-header li {
-  float: right;
-  margin: 20px 10px;
-  font-size: 15px;
-  color: white;
-  font-family: monospace;
-  font-weight: bold;
+  float: left;
+  margin-right: 30px;
+  line-height: 65px;
   cursor: pointer;
 }
 
-.main {
-  background-image: url("https://images.pexels.com/photos/3830745/pexels-photo-3830745.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3830745.jpg&fm=jpg");
+/*master*/
+.master {
+  background: url("https://images.pexels.com/photos/3830745/pexels-photo-3830745.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3830745.jpg&fm=jpg");
+  height: 550px;
   background-size: cover;
-  text-align: left;
-  height: 200px;
   width: 100%;
-  padding: 100px 0px;
-  border-bottom: 5px inset rgb(181, 207, 120);
 }
 
 .main-text {
-  margin-top: 65px;
-  margin-left: 650px;
   color: white;
+  width: 600px;
+  float: right;
+  height: 500px;
+  opacity: 0.8;
 }
 
 .main-text h1 {
-  letter-spacing: 2px;
-  font-size: 36px;
-  padding-bottom: 5px;
-}
-
-.main-text p {
-  letter-spacing: 1px;
-  font-size: 15px;
-}
-
-main {
-  padding: 20px 350px;
-  background-color: rgb(185, 202, 146);
-}
-
-.opening {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border-top: solid 1px grey;
-  border-bottom: solid 1px grey;
-}
-
-.title {
-  width: 50%;
-}
-
-.title h1 {
+  margin-top: 250px;
   font-size: 40px;
 }
 
-.opening-desc p {
-  padding: 15px 0px;
-  text-align: justify;
-  font-size: 16px;
+.content {
+  width: 100%;
+  height: auto;
+  background-color: rgba(185, 202, 146);
 }
 
-.opening-desc {
-  width: 50%;
-  padding-left: 40px;
+.content-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 20px;
+
+}
+
+.opening {
+  display: flex;
+  padding: 10px 10px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+}
+
+.opening h1 {
+  font-size: 20px;
+  width: 430px;
+  text-align: center;
+  padding: 10px;
+}
+
+.opening p {
+  line-height: 20px;
+}
+
+.talents {
+  margin-top: 20px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.talents img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border-radius: 2px solid rgb(153, 175, 149);
+}
+
+.profile-desc {
+  float: right;
 }
 
 .talent {
@@ -216,10 +206,6 @@ main {
   text-align: right;
 }
 
-.words {
-  text-align: justify;
-}
-
 .name {
   font-weight: bold;
 }
@@ -229,11 +215,194 @@ main {
 }
 
 .footer {
-  left: 0;
   bottom: 0;
-  width: 100%;
   background-color: rgba(173, 206, 98, 0.5);
   color: white;
   text-align: center;
   padding: 14px 16px;
+}
+
+/*responsive tablet*/
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+  }
+
+  .master {
+    width: 100%;
+    height: 400px;
+
+  }
+
+  .main-text {
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin-left: 30px;
+    opacity: 0.8;
+  }
+
+  .main-text h1 {
+    margin-top: 250px;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    background-color: rgba(185, 202, 146);
+  }
+
+  .content-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 20px;
+
+  }
+
+  .opening {
+    display: flex;
+    padding: 10px 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+  }
+
+  .opening h1 {
+    font-size: 20px;
+    width: 430px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .opening p {
+    line-height: 20px;
+  }
+
+  .talents {
+    margin-top: 20px;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .talents img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border-radius: 2px solid rgb(153, 175, 149);
+  }
+
+  .profile-desc {
+    float: right;
+  }
+
+  .talents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px grey;
+    padding: 10px 0px;
+  }
+
+  .talents img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid rgb(153, 175, 149);
+  }
+
+  .profile-pict {
+    padding: 10px 20px;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  .profile-pict:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  .profile-desc {
+    width: 50%;
+    padding: 0px 20px;
+  }
+
+  .profile-desc p {
+    margin: 10px 0px;
+    font-size: 14px;
+  }
+
+  .left img {
+    float: right;
+  }
+
+  .right p {
+    text-align: right;
+  }
+
+  .words {
+    text-align: justify;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .email {
+    font-style: italic;
+  }
+
+  .footer {
+    bottom: 0;
+    background-color: rgba(173, 206, 98, 0.5);
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+  }
 }
