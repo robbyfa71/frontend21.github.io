@@ -116,6 +116,7 @@ main {
 }
 
 .opening-desc p {
+  padding: 15px 0px;
   text-align: justify;
   font-size: 16px;
 }
